@@ -4,10 +4,19 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
+//
+// BEFORE USING THIS SCRIPT CREATE ANOTHER TEXT OBJECT AND SET THE FONT SIZE TO ZERO
+//
+
 public class TypeWriter : MonoBehaviour
 {
     public TextMeshProUGUI text;
+
+    // I don't think you need this but I 
+    // needed a way to store the text before I cleared it out
     public TextMeshProUGUI store;
+
+    // Time before the next letter is written
     public float waitTime = 0.1f;
     
     IEnumerator TypeWriterEffect()
