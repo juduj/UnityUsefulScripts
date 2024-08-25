@@ -8,7 +8,8 @@ public class TypeWriter : MonoBehaviour
 {
     public TextMeshProUGUI text;
     public TextMeshProUGUI store;
-
+    public float waitTime = 0.1f;
+    
     IEnumerator TypeWriterEffect()
     {
         store.text = text.text;
@@ -18,7 +19,7 @@ public class TypeWriter : MonoBehaviour
         foreach (char c in store.text.ToCharArray())
         {
             text.text += c.ToString();
-            yield return new WaitForSeconds(0.1f); 
+            yield return new WaitForSeconds(waitTime); 
         }
     }
 
